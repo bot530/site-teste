@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Área do Cliente</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="left-panel">
+            <h2>Área do Cliente</h2>
+            <p>Conectando você ao futuro com segurança, inovação e confiança!</p>
+        </div>
+        <div class="right-panel">
+            <form id="contactForm">
+                <label for="name">Nome Completo:</label>
+                <input type="text" id="name" name="name" onblur="formatarNome()" />
+                <span id="nameError" style="display: none; color: red; font-size: 0.8rem;">Nome inválido</span>
+
+                <label for="cpfCnpj">CPF ou CNPJ:</label>
+                <input type="text" id="cpfCnpj" name="cpfCnpj" oninput="validarTamanhoCPF_CNPJ()" onblur="formatarCPF_CNPJ()" inputmode="numeric" />
+                <span id="cpfCnpjError" style="display: none; color: red; font-size: 0.8rem;"></span>
+
+                <label for="reason">Razão</label>
+                <select id="reason" name="reason">
+                    <option value="">2ª Via de Boleto</option>
+                    <option value="">Parcelas Atrasadas</option>
+                    <option value="">Antecipar Parcelas </option>
+                    <option value="">Quitação de Financiamento</option>
+                    <option value="">Cartão de Credito</option>
+                </select>
+                
+
+                <button type="submit">Entrar em Contato</button>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
